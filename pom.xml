@@ -19,12 +19,10 @@
 
 
         <!-- == Dependencies == -->
-        <junit.version>4.12</junit.version>
+        <junit.version>5.3.2</junit.version>
         <hamcrest.version>1.3</hamcrest.version>
 
         <assertj-core.version>3.2.0</assertj-core.version>
-        <JUnitParams.version>1.0.4</JUnitParams.version>
-        <junit-dataprovider.version>1.10.2</junit-dataprovider.version>
 
         <mockito.version>1.10.19</mockito.version>
         <objenesis.version>2.2</objenesis.version>
@@ -52,8 +50,8 @@
 
         <!-- == jUnit == -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
         </dependency>
 
         <!-- == Hamcrest == -->
@@ -89,8 +87,8 @@
 
             <!-- == jUnit == -->
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
@@ -114,22 +112,6 @@
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj-core.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- == JUnitParams == -->
-            <dependency>
-                <groupId>pl.pragmatists</groupId>
-                <artifactId>JUnitParams</artifactId>
-                <version>${JUnitParams.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- == junit-dataprovider == -->
-            <dependency>
-                <groupId>com.tngtech.java</groupId>
-                <artifactId>junit-dataprovider</artifactId>
-                <version>${junit-dataprovider.version}</version>
                 <scope>test</scope>
             </dependency>
 

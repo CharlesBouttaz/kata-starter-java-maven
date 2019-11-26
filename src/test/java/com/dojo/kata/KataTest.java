@@ -1,28 +1,35 @@
 package com.dojo.kata;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.core.Is.is;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class KataTest {
+class KataTest {
 
     @Test
-    public void should_test_with_AssertJ (){
+    public void shouldTestWithAssertJ() {
         assertThat("foo").isEqualTo("foo");
     }
 
     @Test
-    public void should_test_with_JUnit(){
+    public void shouldTestWithJUnit() {
         assertEquals("foo", "foo");
     }
 
     @Test
-    public void should_test_with_JUnit_matcher(){
-        Assert.assertThat("foo", is("foo"));
+    public void shouldTestWithHamcrestMatcher() {
+        MatcherAssert.assertThat("foo", is("foo"));
     }
 
+    @Test
+    @DisplayName("With jUnit5 we can have nice display names for tests")
+    public void shouldDisplayNiceMessage() {
+        assertThat("foo").isEqualTo("foo");
+    }
 }
 
